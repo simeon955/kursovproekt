@@ -1,0 +1,1609 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE6288BD-2DDB-407B-A7F6-97320A5FA5CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication5</RootNamespace>
+    <AssemblyName>WebApplication5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44374</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\colorbox\colorbox.css" />
+    <Content Include="assets\colorbox\images\border.png" />
+    <Content Include="assets\colorbox\images\controls.png" />
+    <Content Include="assets\colorbox\images\loading.gif" />
+    <Content Include="assets\colorbox\images\loading_background.png" />
+    <Content Include="assets\colorbox\images\overlay.png" />
+    <Content Include="assets\script\jquery.colorbox-min.js" />
+    <Content Include="assets\script\script.js" />
+    <Content Include="assets\styles\aktualno.png" />
+    <Content Include="assets\styles\calendar-text.png" />
+    <Content Include="assets\styles\calendar_shadow.png" />
+    <Content Include="assets\styles\excel-icon.html" />
+    <Content Include="assets\styles\facebook.svg" />
+    <Content Include="assets\styles\gerb_site.png" />
+    <Content Include="assets\styles\header-image-kids-drawing.png" />
+    <Content Include="assets\styles\icon-faq.png" />
+    <Content Include="assets\styles\innerPage\head-pic-inner-page.png" />
+    <Content Include="assets\styles\links.png" />
+    <Content Include="assets\styles\mon-icon5.ico" />
+    <Content Include="assets\styles\pdf-icon.html" />
+    <Content Include="assets\styles\rectangleGray.png" />
+    <Content Include="assets\styles\rectangleGreen.png" />
+    <Content Include="assets\styles\rectangleOrange.png" />
+    <Content Include="assets\styles\rectanglePink.png" />
+    <Content Include="assets\styles\rectanglePurple.png" />
+    <Content Include="assets\styles\rectangleYellow.png" />
+    <Content Include="assets\styles\right-side-menu.png" />
+    <Content Include="assets\styles\rss.svg" />
+    <Content Include="assets\styles\shadow.png" />
+    <Content Include="assets\styles\style.css" />
+    <Content Include="assets\styles\tittle-stroke.svg" />
+    <Content Include="assets\styles\topnav-layers.png" />
+    <Content Include="assets\styles\twitter.svg" />
+    <Content Include="assets\styles\word-icon.html" />
+    <Content Include="bg\1.html" />
+    <Content Include="bg\10.html" />
+    <Content Include="bg\100000.html" />
+    <Content Include="bg\100002.html" />
+    <Content Include="bg\100003.html" />
+    <Content Include="bg\100004.html" />
+    <Content Include="bg\100009.html" />
+    <Content Include="bg\100011.html" />
+    <Content Include="bg\100012.html" />
+    <Content Include="bg\100013.html" />
+    <Content Include="bg\100014.html" />
+    <Content Include="bg\100015.html" />
+    <Content Include="bg\100016.html" />
+    <Content Include="bg\100017.html" />
+    <Content Include="bg\100018.html" />
+    <Content Include="bg\100019.html" />
+    <Content Include="bg\100021.html" />
+    <Content Include="bg\100022.html" />
+    <Content Include="bg\100023.html" />
+    <Content Include="bg\100024.html" />
+    <Content Include="bg\100025.html" />
+    <Content Include="bg\100026.html" />
+    <Content Include="bg\100027.html" />
+    <Content Include="bg\100028.html" />
+    <Content Include="bg\100029.html" />
+    <Content Include="bg\100030.html" />
+    <Content Include="bg\100031.html" />
+    <Content Include="bg\100032.html" />
+    <Content Include="bg\100033.html" />
+    <Content Include="bg\100034.html" />
+    <Content Include="bg\100035.html" />
+    <Content Include="bg\100036.html" />
+    <Content Include="bg\100037.html" />
+    <Content Include="bg\100038.html" />
+    <Content Include="bg\100039.html" />
+    <Content Include="bg\100040.html" />
+    <Content Include="bg\100041.html" />
+    <Content Include="bg\100042.html" />
+    <Content Include="bg\100043.html" />
+    <Content Include="bg\100044.html" />
+    <Content Include="bg\100045.html" />
+    <Content Include="bg\100046.html" />
+    <Content Include="bg\100047.html" />
+    <Content Include="bg\100048.html" />
+    <Content Include="bg\100049.html" />
+    <Content Include="bg\100050.html" />
+    <Content Include="bg\100051.html" />
+    <Content Include="bg\100052.html" />
+    <Content Include="bg\100053.html" />
+    <Content Include="bg\100054.html" />
+    <Content Include="bg\100055.html" />
+    <Content Include="bg\100056.html" />
+    <Content Include="bg\100057.html" />
+    <Content Include="bg\100058.html" />
+    <Content Include="bg\100059.html" />
+    <Content Include="bg\100060.html" />
+    <Content Include="bg\100061.html" />
+    <Content Include="bg\100062.html" />
+    <Content Include="bg\100065.html" />
+    <Content Include="bg\100066.html" />
+    <Content Include="bg\100067.html" />
+    <Content Include="bg\100068.html" />
+    <Content Include="bg\100069.html" />
+    <Content Include="bg\100070.html" />
+    <Content Include="bg\100071.html" />
+    <Content Include="bg\100072.html" />
+    <Content Include="bg\100073.html" />
+    <Content Include="bg\100074.html" />
+    <Content Include="bg\100075.html" />
+    <Content Include="bg\100076.html" />
+    <Content Include="bg\100077.html" />
+    <Content Include="bg\100078.html" />
+    <Content Include="bg\100079.html" />
+    <Content Include="bg\100080.html" />
+    <Content Include="bg\100081.html" />
+    <Content Include="bg\100082.html" />
+    <Content Include="bg\100083.html" />
+    <Content Include="bg\100084.html" />
+    <Content Include="bg\100085.html" />
+    <Content Include="bg\100086.html" />
+    <Content Include="bg\100087.html" />
+    <Content Include="bg\100088.html" />
+    <Content Include="bg\100089.html" />
+    <Content Include="bg\100090.html" />
+    <Content Include="bg\100091.html" />
+    <Content Include="bg\100092.html" />
+    <Content Include="bg\100093.html" />
+    <Content Include="bg\100094.html" />
+    <Content Include="bg\100095.html" />
+    <Content Include="bg\100096.html" />
+    <Content Include="bg\100097.html" />
+    <Content Include="bg\100098.html" />
+    <Content Include="bg\100099.html" />
+    <Content Include="bg\100100.html" />
+    <Content Include="bg\100101.html" />
+    <Content Include="bg\100102.html" />
+    <Content Include="bg\100103.html" />
+    <Content Include="bg\100104.html" />
+    <Content Include="bg\100105.html" />
+    <Content Include="bg\100107.html" />
+    <Content Include="bg\100108.html" />
+    <Content Include="bg\100115.html" />
+    <Content Include="bg\100118.html" />
+    <Content Include="bg\100119.html" />
+    <Content Include="bg\100120.html" />
+    <Content Include="bg\100121.html" />
+    <Content Include="bg\100122.html" />
+    <Content Include="bg\100124.html" />
+    <Content Include="bg\100124\archive\contests.html" />
+    <Content Include="bg\100125.html" />
+    <Content Include="bg\100126.html" />
+    <Content Include="bg\100127.html" />
+    <Content Include="bg\100128.html" />
+    <Content Include="bg\100129.html" />
+    <Content Include="bg\100133.html" />
+    <Content Include="bg\100134.html" />
+    <Content Include="bg\100135.html" />
+    <Content Include="bg\100136.html" />
+    <Content Include="bg\100137.html" />
+    <Content Include="bg\100138.html" />
+    <Content Include="bg\100139.html" />
+    <Content Include="bg\100140.html" />
+    <Content Include="bg\100141.html" />
+    <Content Include="bg\100142.html" />
+    <Content Include="bg\100143.html" />
+    <Content Include="bg\100144.html" />
+    <Content Include="bg\100145.html" />
+    <Content Include="bg\100146.html" />
+    <Content Include="bg\100147.html" />
+    <Content Include="bg\100148.html" />
+    <Content Include="bg\100149.html" />
+    <Content Include="bg\100150.html" />
+    <Content Include="bg\100151.html" />
+    <Content Include="bg\100152.html" />
+    <Content Include="bg\100153.html" />
+    <Content Include="bg\100154.html" />
+    <Content Include="bg\100155.html" />
+    <Content Include="bg\100156.html" />
+    <Content Include="bg\100157.html" />
+    <Content Include="bg\100158.html" />
+    <Content Include="bg\100159.html" />
+    <Content Include="bg\100160.html" />
+    <Content Include="bg\100161.html" />
+    <Content Include="bg\100162.html" />
+    <Content Include="bg\100164.html" />
+    <Content Include="bg\100165.html" />
+    <Content Include="bg\100166.html" />
+    <Content Include="bg\100168.html" />
+    <Content Include="bg\100170.html" />
+    <Content Include="bg\100172.html" />
+    <Content Include="bg\100174.html" />
+    <Content Include="bg\100176.html" />
+    <Content Include="bg\100177.html" />
+    <Content Include="bg\100178.html" />
+    <Content Include="bg\100179.html" />
+    <Content Include="bg\100181.html" />
+    <Content Include="bg\100183.html" />
+    <Content Include="bg\100185.html" />
+    <Content Include="bg\100186.html" />
+    <Content Include="bg\100187.html" />
+    <Content Include="bg\100188.html" />
+    <Content Include="bg\100189.html" />
+    <Content Include="bg\100190.html" />
+    <Content Include="bg\100191.html" />
+    <Content Include="bg\100192.html" />
+    <Content Include="bg\100193.html" />
+    <Content Include="bg\100194.html" />
+    <Content Include="bg\100195.html" />
+    <Content Include="bg\100196.html" />
+    <Content Include="bg\100197.html" />
+    <Content Include="bg\100198.html" />
+    <Content Include="bg\100199.html" />
+    <Content Include="bg\100200.html" />
+    <Content Include="bg\100201.html" />
+    <Content Include="bg\100204.html" />
+    <Content Include="bg\100205.html" />
+    <Content Include="bg\100206.html" />
+    <Content Include="bg\100207.html" />
+    <Content Include="bg\100208.html" />
+    <Content Include="bg\100209.html" />
+    <Content Include="bg\100212.html" />
+    <Content Include="bg\100213.html" />
+    <Content Include="bg\100214.html" />
+    <Content Include="bg\100215.html" />
+    <Content Include="bg\100216.html" />
+    <Content Include="bg\100217.html" />
+    <Content Include="bg\100218.html" />
+    <Content Include="bg\100219.html" />
+    <Content Include="bg\100220.html" />
+    <Content Include="bg\100221.html" />
+    <Content Include="bg\100222.html" />
+    <Content Include="bg\100223.html" />
+    <Content Include="bg\100224.html" />
+    <Content Include="bg\100225.html" />
+    <Content Include="bg\100226.html" />
+    <Content Include="bg\100227.html" />
+    <Content Include="bg\100228.html" />
+    <Content Include="bg\100229.html" />
+    <Content Include="bg\100230.html" />
+    <Content Include="bg\100231.html" />
+    <Content Include="bg\100232.html" />
+    <Content Include="bg\100233.html" />
+    <Content Include="bg\100234.html" />
+    <Content Include="bg\100235.html" />
+    <Content Include="bg\100236.html" />
+    <Content Include="bg\100237.html" />
+    <Content Include="bg\100238.html" />
+    <Content Include="bg\100239.html" />
+    <Content Include="bg\100240.html" />
+    <Content Include="bg\100241.html" />
+    <Content Include="bg\100242.html" />
+    <Content Include="bg\100243.html" />
+    <Content Include="bg\100244.html" />
+    <Content Include="bg\100245.html" />
+    <Content Include="bg\100246.html" />
+    <Content Include="bg\100247.html" />
+    <Content Include="bg\100248.html" />
+    <Content Include="bg\100249.html" />
+    <Content Include="bg\100250.html" />
+    <Content Include="bg\100251.html" />
+    <Content Include="bg\100252.html" />
+    <Content Include="bg\100253.html" />
+    <Content Include="bg\100254.html" />
+    <Content Include="bg\100255.html" />
+    <Content Include="bg\100256.html" />
+    <Content Include="bg\100257.html" />
+    <Content Include="bg\100258.html" />
+    <Content Include="bg\100259.html" />
+    <Content Include="bg\100260.html" />
+    <Content Include="bg\100261.html" />
+    <Content Include="bg\100262.html" />
+    <Content Include="bg\100263.html" />
+    <Content Include="bg\100264.html" />
+    <Content Include="bg\100265.html" />
+    <Content Include="bg\100266.html" />
+    <Content Include="bg\100267.html" />
+    <Content Include="bg\100268.html" />
+    <Content Include="bg\100269.html" />
+    <Content Include="bg\100270.html" />
+    <Content Include="bg\100271.html" />
+    <Content Include="bg\100272.html" />
+    <Content Include="bg\100276.html" />
+    <Content Include="bg\100281.html" />
+    <Content Include="bg\100282.html" />
+    <Content Include="bg\100283.html" />
+    <Content Include="bg\100284.html" />
+    <Content Include="bg\100285.html" />
+    <Content Include="bg\100286.html" />
+    <Content Include="bg\100287.html" />
+    <Content Include="bg\100288.html" />
+    <Content Include="bg\100289.html" />
+    <Content Include="bg\100290.html" />
+    <Content Include="bg\100291.html" />
+    <Content Include="bg\100292.html" />
+    <Content Include="bg\100294.html" />
+    <Content Include="bg\100296.html" />
+    <Content Include="bg\100297.html" />
+    <Content Include="bg\100298.html" />
+    <Content Include="bg\100299.html" />
+    <Content Include="bg\100300.html" />
+    <Content Include="bg\100301.html" />
+    <Content Include="bg\100302.html" />
+    <Content Include="bg\100303.html" />
+    <Content Include="bg\100304.html" />
+    <Content Include="bg\100305.html" />
+    <Content Include="bg\100306.html" />
+    <Content Include="bg\100307.html" />
+    <Content Include="bg\100308.html" />
+    <Content Include="bg\100309.html" />
+    <Content Include="bg\100310.html" />
+    <Content Include="bg\100311.html" />
+    <Content Include="bg\100312.html" />
+    <Content Include="bg\100313.html" />
+    <Content Include="bg\100314.html" />
+    <Content Include="bg\100316.html" />
+    <Content Include="bg\100317.html" />
+    <Content Include="bg\100318.html" />
+    <Content Include="bg\100319.html" />
+    <Content Include="bg\100320.html" />
+    <Content Include="bg\100321.html" />
+    <Content Include="bg\100322.html" />
+    <Content Include="bg\100323.html" />
+    <Content Include="bg\100324.html" />
+    <Content Include="bg\100325.html" />
+    <Content Include="bg\100326.html" />
+    <Content Include="bg\100327.html" />
+    <Content Include="bg\100328.html" />
+    <Content Include="bg\100329.html" />
+    <Content Include="bg\100330.html" />
+    <Content Include="bg\100331.html" />
+    <Content Include="bg\100332.html" />
+    <Content Include="bg\100333.html" />
+    <Content Include="bg\100334.html" />
+    <Content Include="bg\100335.html" />
+    <Content Include="bg\100336.html" />
+    <Content Include="bg\100337.html" />
+    <Content Include="bg\100338.html" />
+    <Content Include="bg\100339.html" />
+    <Content Include="bg\100340.html" />
+    <Content Include="bg\100341.html" />
+    <Content Include="bg\100342.html" />
+    <Content Include="bg\100343.html" />
+    <Content Include="bg\100344.html" />
+    <Content Include="bg\100345.html" />
+    <Content Include="bg\100346.html" />
+    <Content Include="bg\100347.html" />
+    <Content Include="bg\100348.html" />
+    <Content Include="bg\100349.html" />
+    <Content Include="bg\100350.html" />
+    <Content Include="bg\100351.html" />
+    <Content Include="bg\100352.html" />
+    <Content Include="bg\100353.html" />
+    <Content Include="bg\100354.html" />
+    <Content Include="bg\100355.html" />
+    <Content Include="bg\100356.html" />
+    <Content Include="bg\100357.html" />
+    <Content Include="bg\100358.html" />
+    <Content Include="bg\100359.html" />
+    <Content Include="bg\100360.html" />
+    <Content Include="bg\100361.html" />
+    <Content Include="bg\100362.html" />
+    <Content Include="bg\100363.html" />
+    <Content Include="bg\100364.html" />
+    <Content Include="bg\100367.html" />
+    <Content Include="bg\100370.html" />
+    <Content Include="bg\100372.html" />
+    <Content Include="bg\100373.html" />
+    <Content Include="bg\100374.html" />
+    <Content Include="bg\100376.html" />
+    <Content Include="bg\100377.html" />
+    <Content Include="bg\100378.html" />
+    <Content Include="bg\100379.html" />
+    <Content Include="bg\100380.html" />
+    <Content Include="bg\100381.html" />
+    <Content Include="bg\100382.html" />
+    <Content Include="bg\100383.html" />
+    <Content Include="bg\100384.html" />
+    <Content Include="bg\100385.html" />
+    <Content Include="bg\100386.html" />
+    <Content Include="bg\100387.html" />
+    <Content Include="bg\100388.html" />
+    <Content Include="bg\100389.html" />
+    <Content Include="bg\100390.html" />
+    <Content Include="bg\100391.html" />
+    <Content Include="bg\100392.html" />
+    <Content Include="bg\100393.html" />
+    <Content Include="bg\100394.html" />
+    <Content Include="bg\100395.html" />
+    <Content Include="bg\100396.html" />
+    <Content Include="bg\100397.html" />
+    <Content Include="bg\100398.html" />
+    <Content Include="bg\100399.html" />
+    <Content Include="bg\100400.html" />
+    <Content Include="bg\100401.html" />
+    <Content Include="bg\100402.html" />
+    <Content Include="bg\100403.html" />
+    <Content Include="bg\100404.html" />
+    <Content Include="bg\100405.html" />
+    <Content Include="bg\100406.html" />
+    <Content Include="bg\100407.html" />
+    <Content Include="bg\100408.html" />
+    <Content Include="bg\100409.html" />
+    <Content Include="bg\100411.html" />
+    <Content Include="bg\100412.html" />
+    <Content Include="bg\100413.html" />
+    <Content Include="bg\100414.html" />
+    <Content Include="bg\100415.html" />
+    <Content Include="bg\100416.html" />
+    <Content Include="bg\100417.html" />
+    <Content Include="bg\100418.html" />
+    <Content Include="bg\100419.html" />
+    <Content Include="bg\100420.html" />
+    <Content Include="bg\100421.html" />
+    <Content Include="bg\100422.html" />
+    <Content Include="bg\100423.html" />
+    <Content Include="bg\100425.html" />
+    <Content Include="bg\100428.html" />
+    <Content Include="bg\100429.html" />
+    <Content Include="bg\100431.html" />
+    <Content Include="bg\100433.html" />
+    <Content Include="bg\100435.html" />
+    <Content Include="bg\100436.html" />
+    <Content Include="bg\100437.html" />
+    <Content Include="bg\100438.html" />
+    <Content Include="bg\100439.html" />
+    <Content Include="bg\100440.html" />
+    <Content Include="bg\100441.html" />
+    <Content Include="bg\100442.html" />
+    <Content Include="bg\100443.html" />
+    <Content Include="bg\100444.html" />
+    <Content Include="bg\100445.html" />
+    <Content Include="bg\100446.html" />
+    <Content Include="bg\100447.html" />
+    <Content Include="bg\100448.html" />
+    <Content Include="bg\100449.html" />
+    <Content Include="bg\100450.html" />
+    <Content Include="bg\100451.html" />
+    <Content Include="bg\100452.html" />
+    <Content Include="bg\100453.html" />
+    <Content Include="bg\100454.html" />
+    <Content Include="bg\100457.html" />
+    <Content Include="bg\100458.html" />
+    <Content Include="bg\100459.html" />
+    <Content Include="bg\100460.html" />
+    <Content Include="bg\100461.html" />
+    <Content Include="bg\100462.html" />
+    <Content Include="bg\100463.html" />
+    <Content Include="bg\100464.html" />
+    <Content Include="bg\100465.html" />
+    <Content Include="bg\100466.html" />
+    <Content Include="bg\100467.html" />
+    <Content Include="bg\100468.html" />
+    <Content Include="bg\100470.html" />
+    <Content Include="bg\100471.html" />
+    <Content Include="bg\100472.html" />
+    <Content Include="bg\100473.html" />
+    <Content Include="bg\100475.html" />
+    <Content Include="bg\100476.html" />
+    <Content Include="bg\100479.html" />
+    <Content Include="bg\100480.html" />
+    <Content Include="bg\100481.html" />
+    <Content Include="bg\100482.html" />
+    <Content Include="bg\100483.html" />
+    <Content Include="bg\100484.html" />
+    <Content Include="bg\100486.html" />
+    <Content Include="bg\100487.html" />
+    <Content Include="bg\100488.html" />
+    <Content Include="bg\100489.html" />
+    <Content Include="bg\100490.html" />
+    <Content Include="bg\100491.html" />
+    <Content Include="bg\100492.html" />
+    <Content Include="bg\100493.html" />
+    <Content Include="bg\100494.html" />
+    <Content Include="bg\100495.html" />
+    <Content Include="bg\100496.html" />
+    <Content Include="bg\100497.html" />
+    <Content Include="bg\100498.html" />
+    <Content Include="bg\100501.html" />
+    <Content Include="bg\100502.html" />
+    <Content Include="bg\100503.html" />
+    <Content Include="bg\100506.html" />
+    <Content Include="bg\100507.html" />
+    <Content Include="bg\100512.html" />
+    <Content Include="bg\100513.html" />
+    <Content Include="bg\100514.html" />
+    <Content Include="bg\100515.html" />
+    <Content Include="bg\100516.html" />
+    <Content Include="bg\100517.html" />
+    <Content Include="bg\100518.html" />
+    <Content Include="bg\100519.html" />
+    <Content Include="bg\100520.html" />
+    <Content Include="bg\100521.html" />
+    <Content Include="bg\100524.html" />
+    <Content Include="bg\100525.html" />
+    <Content Include="bg\100526.html" />
+    <Content Include="bg\100527.html" />
+    <Content Include="bg\100528.html" />
+    <Content Include="bg\100533.html" />
+    <Content Include="bg\100534.html" />
+    <Content Include="bg\100538.html" />
+    <Content Include="bg\100539.html" />
+    <Content Include="bg\100540.html" />
+    <Content Include="bg\100541.html" />
+    <Content Include="bg\100542.html" />
+    <Content Include="bg\100543.html" />
+    <Content Include="bg\100544.html" />
+    <Content Include="bg\100546.html" />
+    <Content Include="bg\100549.html" />
+    <Content Include="bg\100550.html" />
+    <Content Include="bg\100551.html" />
+    <Content Include="bg\100552.html" />
+    <Content Include="bg\100553.html" />
+    <Content Include="bg\100554.html" />
+    <Content Include="bg\100555.html" />
+    <Content Include="bg\100556.html" />
+    <Content Include="bg\100557.html" />
+    <Content Include="bg\100558.html" />
+    <Content Include="bg\100561.html" />
+    <Content Include="bg\100566.html" />
+    <Content Include="bg\100568.html" />
+    <Content Include="bg\100570.html" />
+    <Content Include="bg\100571.html" />
+    <Content Include="bg\100572.html" />
+    <Content Include="bg\100573.html" />
+    <Content Include="bg\100574.html" />
+    <Content Include="bg\100575.html" />
+    <Content Include="bg\100576.html" />
+    <Content Include="bg\100577.html" />
+    <Content Include="bg\100578.html" />
+    <Content Include="bg\100580.html" />
+    <Content Include="bg\100581.html" />
+    <Content Include="bg\100582.html" />
+    <Content Include="bg\100583.html" />
+    <Content Include="bg\100584.html" />
+    <Content Include="bg\100585.html" />
+    <Content Include="bg\100586.html" />
+    <Content Include="bg\100587.html" />
+    <Content Include="bg\100588.html" />
+    <Content Include="bg\100589.html" />
+    <Content Include="bg\100590.html" />
+    <Content Include="bg\100591.html" />
+    <Content Include="bg\100592.html" />
+    <Content Include="bg\100593.html" />
+    <Content Include="bg\100594.html" />
+    <Content Include="bg\100595.html" />
+    <Content Include="bg\100596.html" />
+    <Content Include="bg\100598.html" />
+    <Content Include="bg\100599.html" />
+    <Content Include="bg\100600.html" />
+    <Content Include="bg\100601.html" />
+    <Content Include="bg\100603.html" />
+    <Content Include="bg\100604.html" />
+    <Content Include="bg\100605.html" />
+    <Content Include="bg\100606.html" />
+    <Content Include="bg\100608.html" />
+    <Content Include="bg\100609.html" />
+    <Content Include="bg\100611.html" />
+    <Content Include="bg\100612.html" />
+    <Content Include="bg\100613.html" />
+    <Content Include="bg\100614.html" />
+    <Content Include="bg\100615.html" />
+    <Content Include="bg\100616.html" />
+    <Content Include="bg\100617.html" />
+    <Content Include="bg\100618.html" />
+    <Content Include="bg\100619.html" />
+    <Content Include="bg\100620.html" />
+    <Content Include="bg\100621.html" />
+    <Content Include="bg\100622.html" />
+    <Content Include="bg\100623.html" />
+    <Content Include="bg\100624.html" />
+    <Content Include="bg\100625.html" />
+    <Content Include="bg\100626.html" />
+    <Content Include="bg\100627.html" />
+    <Content Include="bg\100628.html" />
+    <Content Include="bg\100629.html" />
+    <Content Include="bg\100630.html" />
+    <Content Include="bg\100631.html" />
+    <Content Include="bg\100632.html" />
+    <Content Include="bg\100633.html" />
+    <Content Include="bg\100634.html" />
+    <Content Include="bg\100635.html" />
+    <Content Include="bg\100636.html" />
+    <Content Include="bg\100637.html" />
+    <Content Include="bg\100638.html" />
+    <Content Include="bg\100639.html" />
+    <Content Include="bg\100640.html" />
+    <Content Include="bg\100641.html" />
+    <Content Include="bg\100642.html" />
+    <Content Include="bg\100644.html" />
+    <Content Include="bg\100645.html" />
+    <Content Include="bg\100647.html" />
+    <Content Include="bg\100649.html" />
+    <Content Include="bg\100650.html" />
+    <Content Include="bg\100651.html" />
+    <Content Include="bg\100652.html" />
+    <Content Include="bg\100653.html" />
+    <Content Include="bg\100654.html" />
+    <Content Include="bg\100655.html" />
+    <Content Include="bg\100656.html" />
+    <Content Include="bg\100657.html" />
+    <Content Include="bg\100658.html" />
+    <Content Include="bg\100659.html" />
+    <Content Include="bg\100660.html" />
+    <Content Include="bg\100661.html" />
+    <Content Include="bg\100662.html" />
+    <Content Include="bg\100663.html" />
+    <Content Include="bg\100669.html" />
+    <Content Include="bg\100670.html" />
+    <Content Include="bg\100672.html" />
+    <Content Include="bg\100673.html" />
+    <Content Include="bg\100674.html" />
+    <Content Include="bg\100675.html" />
+    <Content Include="bg\100677.html" />
+    <Content Include="bg\100678.html" />
+    <Content Include="bg\100679.html" />
+    <Content Include="bg\100680.html" />
+    <Content Include="bg\100681.html" />
+    <Content Include="bg\100682.html" />
+    <Content Include="bg\100683.html" />
+    <Content Include="bg\100684.html" />
+    <Content Include="bg\100685.html" />
+    <Content Include="bg\100686.html" />
+    <Content Include="bg\100687.html" />
+    <Content Include="bg\100688.html" />
+    <Content Include="bg\100689.html" />
+    <Content Include="bg\100690.html" />
+    <Content Include="bg\100691.html" />
+    <Content Include="bg\100692.html" />
+    <Content Include="bg\100694.html" />
+    <Content Include="bg\100695.html" />
+    <Content Include="bg\100723.html" />
+    <Content Include="bg\100725.html" />
+    <Content Include="bg\100726.html" />
+    <Content Include="bg\100727.html" />
+    <Content Include="bg\100728.html" />
+    <Content Include="bg\100729.html" />
+    <Content Include="bg\100730.html" />
+    <Content Include="bg\100731.html" />
+    <Content Include="bg\100732.html" />
+    <Content Include="bg\100734.html" />
+    <Content Include="bg\100735.html" />
+    <Content Include="bg\100736.html" />
+    <Content Include="bg\100737.html" />
+    <Content Include="bg\100738.html" />
+    <Content Include="bg\100739.html" />
+    <Content Include="bg\100740.html" />
+    <Content Include="bg\100741.html" />
+    <Content Include="bg\100742.html" />
+    <Content Include="bg\100743.html" />
+    <Content Include="bg\100744.html" />
+    <Content Include="bg\100745.html" />
+    <Content Include="bg\100746.html" />
+    <Content Include="bg\100747.html" />
+    <Content Include="bg\100748.html" />
+    <Content Include="bg\100749.html" />
+    <Content Include="bg\100750.html" />
+    <Content Include="bg\100751.html" />
+    <Content Include="bg\100752.html" />
+    <Content Include="bg\100753.html" />
+    <Content Include="bg\100754.html" />
+    <Content Include="bg\100755.html" />
+    <Content Include="bg\100756.html" />
+    <Content Include="bg\100757.html" />
+    <Content Include="bg\100758.html" />
+    <Content Include="bg\100759.html" />
+    <Content Include="bg\100761.html" />
+    <Content Include="bg\100762.html" />
+    <Content Include="bg\100763.html" />
+    <Content Include="bg\100764.html" />
+    <Content Include="bg\1034.html" />
+    <Content Include="bg\1036.html" />
+    <Content Include="bg\1071.html" />
+    <Content Include="bg\11.html" />
+    <Content Include="bg\1103.html" />
+    <Content Include="bg\112.html" />
+    <Content Include="bg\1127.html" />
+    <Content Include="bg\1128.html" />
+    <Content Include="bg\1135.html" />
+    <Content Include="bg\116.html" />
+    <Content Include="bg\1171.html" />
+    <Content Include="bg\1198.html" />
+    <Content Include="bg\12.html" />
+    <Content Include="bg\1217.html" />
+    <Content Include="bg\1228.html" />
+    <Content Include="bg\126.html" />
+    <Content Include="bg\1278.html" />
+    <Content Include="bg\128.html" />
+    <Content Include="bg\1294.html" />
+    <Content Include="bg\13.html" />
+    <Content Include="bg\130.html" />
+    <Content Include="bg\1305.html" />
+    <Content Include="bg\1336.html" />
+    <Content Include="bg\1375.html" />
+    <Content Include="bg\138.html" />
+    <Content Include="bg\139.html" />
+    <Content Include="bg\14.html" />
+    <Content Include="bg\140.html" />
+    <Content Include="bg\141.html" />
+    <Content Include="bg\142.html" />
+    <Content Include="bg\143.html" />
+    <Content Include="bg\144.html" />
+    <Content Include="bg\145.html" />
+    <Content Include="bg\1467.html" />
+    <Content Include="bg\149.html" />
+    <Content Include="bg\1493.html" />
+    <Content Include="bg\15.html" />
+    <Content Include="bg\150.html" />
+    <Content Include="bg\151.html" />
+    <Content Include="bg\1518.html" />
+    <Content Include="bg\1519.html" />
+    <Content Include="bg\152.html" />
+    <Content Include="bg\1521.html" />
+    <Content Include="bg\153.html" />
+    <Content Include="bg\1534.html" />
+    <Content Include="bg\154.html" />
+    <Content Include="bg\1546.html" />
+    <Content Include="bg\156.html" />
+    <Content Include="bg\16.html" />
+    <Content Include="bg\1658.html" />
+    <Content Include="bg\167.html" />
+    <Content Include="bg\1676.html" />
+    <Content Include="bg\168.html" />
+    <Content Include="bg\1682.html" />
+    <Content Include="bg\1683.html" />
+    <Content Include="bg\1685.html" />
+    <Content Include="bg\1688.html" />
+    <Content Include="bg\169.html" />
+    <Content Include="bg\1692.html" />
+    <Content Include="bg\170.html" />
+    <Content Include="bg\173.html" />
+    <Content Include="bg\1739.html" />
+    <Content Include="bg\174.html" />
+    <Content Include="bg\1745.html" />
+    <Content Include="bg\1749.html" />
+    <Content Include="bg\175.html" />
+    <Content Include="bg\1754.html" />
+    <Content Include="bg\1767.html" />
+    <Content Include="bg\1768.html" />
+    <Content Include="bg\177.html" />
+    <Content Include="bg\1775.html" />
+    <Content Include="bg\1781.html" />
+    <Content Include="bg\1782.html" />
+    <Content Include="bg\1783.html" />
+    <Content Include="bg\1852.html" />
+    <Content Include="bg\1885.html" />
+    <Content Include="bg\1896.html" />
+    <Content Include="bg\19.html" />
+    <Content Include="bg\190.html" />
+    <Content Include="bg\191.html" />
+    <Content Include="bg\1910.html" />
+    <Content Include="bg\192.html" />
+    <Content Include="bg\1977.html" />
+    <Content Include="bg\199.html" />
+    <Content Include="bg\2.html" />
+    <Content Include="bg\2006.html" />
+    <Content Include="bg\2017.html" />
+    <Content Include="bg\2039.html" />
+    <Content Include="bg\2041.html" />
+    <Content Include="bg\205.html" />
+    <Content Include="bg\2105.html" />
+    <Content Include="bg\213.html" />
+    <Content Include="bg\2135.html" />
+    <Content Include="bg\2148.html" />
+    <Content Include="bg\215.html" />
+    <Content Include="bg\2150.html" />
+    <Content Include="bg\2159.html" />
+    <Content Include="bg\2160.html" />
+    <Content Include="bg\2161.html" />
+    <Content Include="bg\2164.html" />
+    <Content Include="bg\2178.html" />
+    <Content Include="bg\2180.html" />
+    <Content Include="bg\2214.html" />
+    <Content Include="bg\2222.html" />
+    <Content Include="bg\2223.html" />
+    <Content Include="bg\2224.html" />
+    <Content Include="bg\2225.html" />
+    <Content Include="bg\2226.html" />
+    <Content Include="bg\2228.html" />
+    <Content Include="bg\2229.html" />
+    <Content Include="bg\2230.html" />
+    <Content Include="bg\2231.html" />
+    <Content Include="bg\2236.html" />
+    <Content Include="bg\2242.html" />
+    <Content Include="bg\228.html" />
+    <Content Include="bg\229.html" />
+    <Content Include="bg\237.html" />
+    <Content Include="bg\241.html" />
+    <Content Include="bg\247.html" />
+    <Content Include="bg\25.html" />
+    <Content Include="bg\257.html" />
+    <Content Include="bg\26.html" />
+    <Content Include="bg\27.html" />
+    <Content Include="bg\276.html" />
+    <Content Include="bg\277.html" />
+    <Content Include="bg\278.html" />
+    <Content Include="bg\28.html" />
+    <Content Include="bg\29.html" />
+    <Content Include="bg\295.html" />
+    <Content Include="bg\298.html" />
+    <Content Include="bg\3.html" />
+    <Content Include="bg\30.html" />
+    <Content Include="bg\302.html" />
+    <Content Include="bg\303.html" />
+    <Content Include="bg\304.html" />
+    <Content Include="bg\306.html" />
+    <Content Include="bg\307.html" />
+    <Content Include="bg\308.html" />
+    <Content Include="bg\309.html" />
+    <Content Include="bg\31.html" />
+    <Content Include="bg\310.html" />
+    <Content Include="bg\311.html" />
+    <Content Include="bg\312.html" />
+    <Content Include="bg\313.html" />
+    <Content Include="bg\314.html" />
+    <Content Include="bg\315.html" />
+    <Content Include="bg\316.html" />
+    <Content Include="bg\317.html" />
+    <Content Include="bg\318.html" />
+    <Content Include="bg\32.html" />
+    <Content Include="bg\324.html" />
+    <Content Include="bg\329.html" />
+    <Content Include="bg\330.html" />
+    <Content Include="bg\34.html" />
+    <Content Include="bg\35.html" />
+    <Content Include="bg\353.html" />
+    <Content Include="bg\36.html" />
+    <Content Include="bg\361.html" />
+    <Content Include="bg\362.html" />
+    <Content Include="bg\363.html" />
+    <Content Include="bg\365.html" />
+    <Content Include="bg\369.html" />
+    <Content Include="bg\37.html" />
+    <Content Include="bg\372.html" />
+    <Content Include="bg\377.html" />
+    <Content Include="bg\378.html" />
+    <Content Include="bg\38.html" />
+    <Content Include="bg\39.html" />
+    <Content Include="bg\4.html" />
+    <Content Include="bg\40.html" />
+    <Content Include="bg\409.html" />
+    <Content Include="bg\41.html" />
+    <Content Include="bg\42.html" />
+    <Content Include="bg\425.html" />
+    <Content Include="bg\429.html" />
+    <Content Include="bg\43.html" />
+    <Content Include="bg\433.html" />
+    <Content Include="bg\44.html" />
+    <Content Include="bg\446.html" />
+    <Content Include="bg\46.html" />
+    <Content Include="bg\47.html" />
+    <Content Include="bg\48.html" />
+    <Content Include="bg\49.html" />
+    <Content Include="bg\5.html" />
+    <Content Include="bg\51.html" />
+    <Content Include="bg\516.html" />
+    <Content Include="bg\52.html" />
+    <Content Include="bg\526.html" />
+    <Content Include="bg\527.html" />
+    <Content Include="bg\53.html" />
+    <Content Include="bg\530.html" />
+    <Content Include="bg\54.html" />
+    <Content Include="bg\541.html" />
+    <Content Include="bg\542.html" />
+    <Content Include="bg\544.html" />
+    <Content Include="bg\548.html" />
+    <Content Include="bg\55.html" />
+    <Content Include="bg\553.html" />
+    <Content Include="bg\554.html" />
+    <Content Include="bg\556.html" />
+    <Content Include="bg\56.html" />
+    <Content Include="bg\564.html" />
+    <Content Include="bg\57.html" />
+    <Content Include="bg\576.html" />
+    <Content Include="bg\58.html" />
+    <Content Include="bg\580.html" />
+    <Content Include="bg\583.html" />
+    <Content Include="bg\589.html" />
+    <Content Include="bg\59.html" />
+    <Content Include="bg\592.html" />
+    <Content Include="bg\593.html" />
+    <Content Include="bg\594.html" />
+    <Content Include="bg\595.html" />
+    <Content Include="bg\598.html" />
+    <Content Include="bg\599.html" />
+    <Content Include="bg\6.html" />
+    <Content Include="bg\60.html" />
+    <Content Include="bg\600.html" />
+    <Content Include="bg\601.html" />
+    <Content Include="bg\602.html" />
+    <Content Include="bg\603.html" />
+    <Content Include="bg\604.html" />
+    <Content Include="bg\605.html" />
+    <Content Include="bg\607.html" />
+    <Content Include="bg\61.html" />
+    <Content Include="bg\62.html" />
+    <Content Include="bg\622.html" />
+    <Content Include="bg\623.html" />
+    <Content Include="bg\624.html" />
+    <Content Include="bg\625.html" />
+    <Content Include="bg\627.html" />
+    <Content Include="bg\63.html" />
+    <Content Include="bg\631.html" />
+    <Content Include="bg\635.html" />
+    <Content Include="bg\638.html" />
+    <Content Include="bg\64.html" />
+    <Content Include="bg\65.html" />
+    <Content Include="bg\66.html" />
+    <Content Include="bg\67.html" />
+    <Content Include="bg\68.html" />
+    <Content Include="bg\686.html" />
+    <Content Include="bg\698.html" />
+    <Content Include="bg\699.html" />
+    <Content Include="bg\7.html" />
+    <Content Include="bg\70.html" />
+    <Content Include="bg\706.html" />
+    <Content Include="bg\71.html" />
+    <Content Include="bg\72.html" />
+    <Content Include="bg\74.html" />
+    <Content Include="bg\75.html" />
+    <Content Include="bg\750.html" />
+    <Content Include="bg\767.html" />
+    <Content Include="bg\776.html" />
+    <Content Include="bg\78.html" />
+    <Content Include="bg\781.html" />
+    <Content Include="bg\789.html" />
+    <Content Include="bg\79.html" />
+    <Content Include="bg\8.html" />
+    <Content Include="bg\80.html" />
+    <Content Include="bg\834.html" />
+    <Content Include="bg\868.html" />
+    <Content Include="bg\869.html" />
+    <Content Include="bg\872.html" />
+    <Content Include="bg\873.html" />
+    <Content Include="bg\877.html" />
+    <Content Include="bg\894.html" />
+    <Content Include="bg\9.html" />
+    <Content Include="bg\932.html" />
+    <Content Include="bg\933.html" />
+    <Content Include="bg\94.html" />
+    <Content Include="bg\943.html" />
+    <Content Include="bg\95.html" />
+    <Content Include="bg\950.html" />
+    <Content Include="bg\960.html" />
+    <Content Include="bg\97.html" />
+    <Content Include="bg\98.html" />
+    <Content Include="bg\99.html" />
+    <Content Include="bg\archive\drafts.html" />
+    <Content Include="bg\contacts.html" />
+    <Content Include="bg\good-news.html" />
+    <Content Include="bg\good-news2207.html" />
+    <Content Include="bg\good-news5c7e.html" />
+    <Content Include="bg\good-news905b.html" />
+    <Content Include="bg\good-newscff1.html" />
+    <Content Include="bg\good-news\3439.html" />
+    <Content Include="bg\good-news\3520.html" />
+    <Content Include="bg\good-news\3591.html" />
+    <Content Include="bg\good-news\3621.html" />
+    <Content Include="bg\good-news\3623.html" />
+    <Content Include="bg\good-news\3642.html" />
+    <Content Include="bg\good-news\3671.html" />
+    <Content Include="bg\good-news\3762.html" />
+    <Content Include="bg\good-news\3764.html" />
+    <Content Include="bg\good-news\3810.html" />
+    <Content Include="bg\index.html" />
+    <Content Include="bg\news.html" />
+    <Content Include="bg\news0012.html" />
+    <Content Include="bg\news0345.html" />
+    <Content Include="bg\news04cd.html" />
+    <Content Include="bg\news0721.html" />
+    <Content Include="bg\news0735.html" />
+    <Content Include="bg\news094d.html" />
+    <Content Include="bg\news0a10.html" />
+    <Content Include="bg\news0b69.html" />
+    <Content Include="bg\news0d0b.html" />
+    <Content Include="bg\news0e62.html" />
+    <Content Include="bg\news1098.html" />
+    <Content Include="bg\news153d.html" />
+    <Content Include="bg\news1611.html" />
+    <Content Include="bg\news198a.html" />
+    <Content Include="bg\news1a26.html" />
+    <Content Include="bg\news1c00.html" />
+    <Content Include="bg\news1c4a.html" />
+    <Content Include="bg\news1e7e.html" />
+    <Content Include="bg\news2207.html" />
+    <Content Include="bg\news248a.html" />
+    <Content Include="bg\news269b.html" />
+    <Content Include="bg\news287b.html" />
+    <Content Include="bg\news2c90.html" />
+    <Content Include="bg\news2cce.html" />
+    <Content Include="bg\news2cf9.html" />
+    <Content Include="bg\news2dc4.html" />
+    <Content Include="bg\news2dc8.html" />
+    <Content Include="bg\news2df4.html" />
+    <Content Include="bg\news2fa7.html" />
+    <Content Include="bg\news30a5.html" />
+    <Content Include="bg\news31a3.html" />
+    <Content Include="bg\news341b.html" />
+    <Content Include="bg\news36d4.html" />
+    <Content Include="bg\news3961.html" />
+    <Content Include="bg\news3965.html" />
+    <Content Include="bg\news3ba0.html" />
+    <Content Include="bg\news3c55.html" />
+    <Content Include="bg\news3f3a.html" />
+    <Content Include="bg\news3f5a.html" />
+    <Content Include="bg\news3fbb.html" />
+    <Content Include="bg\news40a0.html" />
+    <Content Include="bg\news4170.html" />
+    <Content Include="bg\news421d.html" />
+    <Content Include="bg\news42dc.html" />
+    <Content Include="bg\news43b2.html" />
+    <Content Include="bg\news44d0.html" />
+    <Content Include="bg\news4579.html" />
+    <Content Include="bg\news460d.html" />
+    <Content Include="bg\news47f2.html" />
+    <Content Include="bg\news4837.html" />
+    <Content Include="bg\news49a5.html" />
+    <Content Include="bg\news49b1.html" />
+    <Content Include="bg\news4ab3.html" />
+    <Content Include="bg\news4f61.html" />
+    <Content Include="bg\news5070.html" />
+    <Content Include="bg\news5401.html" />
+    <Content Include="bg\news55e4.html" />
+    <Content Include="bg\news5643.html" />
+    <Content Include="bg\news56d6.html" />
+    <Content Include="bg\news5757.html" />
+    <Content Include="bg\news5791.html" />
+    <Content Include="bg\news5831.html" />
+    <Content Include="bg\news5a24.html" />
+    <Content Include="bg\news5c36.html" />
+    <Content Include="bg\news5c7e.html" />
+    <Content Include="bg\news5c90.html" />
+    <Content Include="bg\news5cfa.html" />
+    <Content Include="bg\news5d38.html" />
+    <Content Include="bg\news5e74.html" />
+    <Content Include="bg\news5eda.html" />
+    <Content Include="bg\news5f87.html" />
+    <Content Include="bg\news5fb3.html" />
+    <Content Include="bg\news60d6.html" />
+    <Content Include="bg\news6213.html" />
+    <Content Include="bg\news648c.html" />
+    <Content Include="bg\news64b4.html" />
+    <Content Include="bg\news65d2.html" />
+    <Content Include="bg\news678b.html" />
+    <Content Include="bg\news6aed.html" />
+    <Content Include="bg\news6c46.html" />
+    <Content Include="bg\news6cf3.html" />
+    <Content Include="bg\news6f72.html" />
+    <Content Include="bg\news6ffe.html" />
+    <Content Include="bg\news735a.html" />
+    <Content Include="bg\news7665.html" />
+    <Content Include="bg\news7737.html" />
+    <Content Include="bg\news7896.html" />
+    <Content Include="bg\news7ea6.html" />
+    <Content Include="bg\news7ef4.html" />
+    <Content Include="bg\news8054.html" />
+    <Content Include="bg\news8320.html" />
+    <Content Include="bg\news86fa.html" />
+    <Content Include="bg\news87e6.html" />
+    <Content Include="bg\news8820.html" />
+    <Content Include="bg\news88b9.html" />
+    <Content Include="bg\news8af0.html" />
+    <Content Include="bg\news8b4e.html" />
+    <Content Include="bg\news8bc8.html" />
+    <Content Include="bg\news8cae.html" />
+    <Content Include="bg\news8cd4.html" />
+    <Content Include="bg\news8cf7.html" />
+    <Content Include="bg\news8e15.html" />
+    <Content Include="bg\news8ed7.html" />
+    <Content Include="bg\news905b.html" />
+    <Content Include="bg\news913e.html" />
+    <Content Include="bg\news9430.html" />
+    <Content Include="bg\news9469.html" />
+    <Content Include="bg\news94b0.html" />
+    <Content Include="bg\news96f1.html" />
+    <Content Include="bg\news970c.html" />
+    <Content Include="bg\news9751.html" />
+    <Content Include="bg\news9787.html" />
+    <Content Include="bg\news9c49.html" />
+    <Content Include="bg\news9cd7.html" />
+    <Content Include="bg\newsa1ca.html" />
+    <Content Include="bg\newsa36b.html" />
+    <Content Include="bg\newsae74.html" />
+    <Content Include="bg\newsb135.html" />
+    <Content Include="bg\newsb190.html" />
+    <Content Include="bg\newsb4d2.html" />
+    <Content Include="bg\newsb5fb.html" />
+    <Content Include="bg\newsb6ad.html" />
+    <Content Include="bg\newsb8c4.html" />
+    <Content Include="bg\newsb93f.html" />
+    <Content Include="bg\newsb950.html" />
+    <Content Include="bg\newsba52.html" />
+    <Content Include="bg\newsbbbb.html" />
+    <Content Include="bg\newsbde5.html" />
+    <Content Include="bg\newsbe3b.html" />
+    <Content Include="bg\newsc471.html" />
+    <Content Include="bg\newsc4f7.html" />
+    <Content Include="bg\newsc5eb.html" />
+    <Content Include="bg\newsc7e3.html" />
+    <Content Include="bg\newscb30.html" />
+    <Content Include="bg\newscbb6.html" />
+    <Content Include="bg\newscc0f.html" />
+    <Content Include="bg\newscff1.html" />
+    <Content Include="bg\newsd1a7.html" />
+    <Content Include="bg\newsd4a6.html" />
+    <Content Include="bg\newsd52d.html" />
+    <Content Include="bg\newsd78c.html" />
+    <Content Include="bg\newsd7d8.html" />
+    <Content Include="bg\newsd8eb.html" />
+    <Content Include="bg\newsdb4e.html" />
+    <Content Include="bg\newsdb84.html" />
+    <Content Include="bg\newsdc22.html" />
+    <Content Include="bg\newsdd23.html" />
+    <Content Include="bg\newse2dc.html" />
+    <Content Include="bg\newse539.html" />
+    <Content Include="bg\newse6f0.html" />
+    <Content Include="bg\newse839.html" />
+    <Content Include="bg\newse856.html" />
+    <Content Include="bg\newse887.html" />
+    <Content Include="bg\newse9b4.html" />
+    <Content Include="bg\newsea0f.html" />
+    <Content Include="bg\newsee5b.html" />
+    <Content Include="bg\newseffd.html" />
+    <Content Include="bg\newsf488.html" />
+    <Content Include="bg\newsfbd5.html" />
+    <Content Include="bg\news\3773.html" />
+    <Content Include="bg\news\3776.html" />
+    <Content Include="bg\news\3788.html" />
+    <Content Include="bg\news\3792.html" />
+    <Content Include="bg\news\3799.html" />
+    <Content Include="bg\news\3802.html" />
+    <Content Include="bg\news\3805.html" />
+    <Content Include="bg\news\3807.html" />
+    <Content Include="bg\news\3808.html" />
+    <Content Include="bg\news\3809.html" />
+    <Content Include="bg\news\3811.html" />
+    <Content Include="bg\news\3812.html" />
+    <Content Include="bg\news\3813.html" />
+    <Content Include="bg\news\3814.html" />
+    <Content Include="bg\news\3815.html" />
+    <Content Include="bg\search.html" />
+    <Content Include="bg\sitemap.html" />
+    <Content Include="bg\students.html" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\WebApplication5.dll" />
+    <Content Include="bin\WebApplication5.pdb" />
+    <Content Include="cdn-cgi\l\email-protection.html" />
+    <Content Include="cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js" />
+    <Content Include="en\1.html" />
+    <Content Include="en\100000.html" />
+    <Content Include="en\13.html" />
+    <Content Include="en\14.html" />
+    <Content Include="en\2.html" />
+    <Content Include="en\3.html" />
+    <Content Include="en\4.html" />
+    <Content Include="en\5.html" />
+    <Content Include="en\6.html" />
+    <Content Include="en\74.html" />
+    <Content Include="en\contacts.html" />
+    <Content Include="en\index.html" />
+    <Content Include="en\news.html" />
+    <Content Include="en\news\2937.html" />
+    <Content Include="en\news\2947.html" />
+    <Content Include="en\news\2956.html" />
+    <Content Include="en\news\2995.html" />
+    <Content Include="en\news\2996.html" />
+    <Content Include="en\news\2999.html" />
+    <Content Include="en\news\3083.html" />
+    <Content Include="en\news\3107.html" />
+    <Content Include="en\news\3148.html" />
+    <Content Include="en\sitemap.html" />
+    <Content Include="Global.asax" />
+    <Content Include="upload\21267\pr_NacPr+RMS_141119.html" />
+    <Content Include="upload\21268\pr_NacPr+dokladMS_141119.html" />
+    <Content Include="upload\21271\pr_NacPr+EvrNauchniM_151119.html" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\styles\fonts\socicon.eot" />
+    <Content Include="assets\styles\fonts\socicon.ttf" />
+    <Content Include="assets\styles\fonts\socicon.woff" />
+    <Content Include="assets\styles\fonts\socicond41d.eot" />
+    <Content Include="bg\rss" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\WebApplication5.dll.config" />
+    <Content Include="en\rss" />
+    <None Include="packages.config" />
+    <Content Include="upload\10721\zapovedRD09_1105_Pravila_za_NKM_H2020.pdf_%3b filename_=UTF-8%27%27zapovedRD09_1105_Pravila_za_NKM_H2020.pdf%3b size=131738" />
+    <Content Include="upload\10722\Full_report_Peer_Review_of_the_BG_RI_system_under_the_PSF_bgl.pdf_%3b filename_=UTF-8%27%27Full_report_Peer_Review_of_the_BG_RI_system_under_the_PSF_bgl.pdf%3b size=1488622" />
+    <Content Include="upload\13883\banner3.png_%3b filename_=UTF-8%27%27banner3.png%3b size=84925" />
+    <Content Include="upload\13884\banner4.png_%3b filename_=UTF-8%27%27banner4.png%3b size=61755" />
+    <Content Include="upload\13885\banner6.png_%3b filename_=UTF-8%27%27banner6.png%3b size=35107" />
+    <Content Include="upload\13886\banner11.png_%3b filename_=UTF-8%27%27banner11.png%3b size=55153" />
+    <Content Include="upload\13887\banner9.png_%3b filename_=UTF-8%27%27banner9.png%3b size=19273" />
+    <Content Include="upload\13888\banner8.png_%3b filename_=UTF-8%27%27banner8.png%3b size=49701" />
+    <Content Include="upload\13890\banner10.png_%3b filename_=UTF-8%27%27banner10.png%3b size=33714" />
+    <Content Include="upload\14205\58c134c82a93c.jpg_%3b filename_=UTF-8%27%2758c134c82a93c.jpg%3b size=5496" />
+    <Content Include="upload\14209\uchenici.png_%3b filename_=UTF-8%27%27uchenici.png%3b size=8037" />
+    <Content Include="upload\14232\zeleno4.png_%3b filename_=UTF-8%27%27zeleno4.png%3b size=21687" />
+    <Content Include="upload\14245\anticorruption-red.png_%3b filename_=UTF-8%27%27anticorruption-red.png%3b size=9195" />
+    <Content Include="upload\14329\telefon-signali.png_%3b filename_=UTF-8%27%27telefon-signali.png%3b size=10109" />
+    <Content Include="upload\14431\logo-kartografirane.jpg_%3b filename_=UTF-8%27%27logo-kartografirane.jpg%3b size=2907" />
+    <Content Include="upload\14470\logo-VIREO-s.jpg_%3b filename_=UTF-8%27%27logo-VIREO-s.jpg%3b size=2956" />
+    <Content Include="upload\14643\Sacheva-NDK.jpg_%3b filename_=UTF-8%27%27Sacheva-NDK456d.jpg%3b size=69734" />
+    <Content Include="upload\14734\LOGO_EU2018ENG-2.jpg_%3b filename_=UTF-8%27%27LOGO_EU2018ENG-2456d.jpg%3b size=583877" />
+    <Content Include="upload\14783\Sofia-Teh-Park-220318-5.jpg_%3b filename_=UTF-8%27%27Sofia-Teh-Park-220318-5456d.jpg%3b size=21929" />
+    <Content Include="upload\14838\e-uchebnici.gif_%3b filename_=UTF-8%27%27e-uchebnici.gif%3b size=3937" />
+    <Content Include="upload\15068\GoodNews.gif_%3b filename_=UTF-8%27%27GoodNews.gif%3b size=3438" />
+    <Content Include="upload\15125\img-20042018-1.jpg_%3b filename_=UTF-8%27%27img-20042018-1.jpg%3b size=105722" />
+    <Content Include="upload\15162\23042018-sacheva-eqar.png_%3b filename_=UTF-8%27%2723042018-sacheva-eqar.png%3b size=1501176" />
+    <Content Include="upload\15174\190418_EducateToCreate.jpg_%3b filename_=UTF-8%27%27190418_EducateToCreate.jpg%3b size=490979" />
+    <Content Include="upload\15747\AK_Plan_v14_150618.pdf_%3b filename_=UTF-8%27%27AK_Plan_v14_150618.pdf%3b size=392394" />
+    <Content Include="upload\15756\STM_8138.jpg_%3b filename_=UTF-8%27%27STM_8138456d.jpg%3b size=40376" />
+    <Content Include="upload\16343\PMS115_izm-PMS90-stidentii-studenti.pdf_%3b filename_=UTF-8%27%27PMS115_izm-PMS90-stidentii-studenti.pdf%3b size=72538" />
+    <Content Include="upload\16344\PMS171_170818.pdf_%3b filename_=UTF-8%27%27PMS171_170818.pdf%3b size=130796" />
+    <Content Include="upload\16717\stem-1.gif_%3b filename_=UTF-8%27%27stem-1.gif%3b size=2691" />
+    <Content Include="upload\16721\qr-code-decatabg.eu.png_%3b filename_=UTF-8%27%27qr-code-decatabg.eu.png%3b size=93661" />
+    <Content Include="upload\17142\Vatreshni_Pravila_Inspektorat_251018.pdf_%3b filename_=UTF-8%27%27Vatreshni_Pravila_Inspektorat_251018.pdf%3b size=127666" />
+    <Content Include="upload\17402\logo-inovativni.jpg_%3b filename_=UTF-8%27%27logo-inovativni.jpg%3b size=144230" />
+    <Content Include="upload\18384\_-_.jpg_%3b filename_=UTF-8%27%27%25D1%2583-%25D1%2589%25D0%25B573d9.jpg%3b size=44145" />
+    <Content Include="upload\18425\antikorupcionenPlan-2018.pdf_%3b filename_=UTF-8%27%27antikorupcionenPlan-2018.pdf%3b size=134006" />
+    <Content Include="upload\18450\VU_rating_koeficienti_2019.pdf_%3b filename_=UTF-8%27%27VU_rating_koeficienti_2019.pdf%3b size=93740" />
+    <Content Include="upload\18556\annex_d01-216_291118_KTD.pdf_%3b filename_=UTF-8%27%27annex_d01-216_291118_KTD.pdf%3b size=305267" />
+    <Content Include="upload\18557\KTD_d01-100_110618.pdf_%3b filename_=UTF-8%27%27KTD_d01-100_110618.pdf%3b size=2177570" />
+    <Content Include="upload\18569\Pril1_UIP-IIZK-priem-8kl-25012019.pdf_%3b filename_=UTF-8%27%27Pril1_UIP-IIZK-priem-8kl-25012019.pdf%3b size=174022" />
+    <Content Include="upload\18570\Pril2_UIP-Muzika-priem-8kl-25012019.pdf_%3b filename_=UTF-8%27%27Pril2_UIP-Muzika-priem-8kl-25012019.pdf%3b size=139273" />
+    <Content Include="upload\18571\Pril2_UIP-FVS-priem-8kl-25012019.pdf_%3b filename_=UTF-8%27%27Pril2_UIP-FVS-priem-8kl-25012019.pdf%3b size=102658" />
+    <Content Include="upload\18724\spisak-teglo-uchebnici-v1.pdf_%3b filename_=UTF-8%27%27spisak-teglo-uchebnici-v1.pdf%3b size=320648" />
+    <Content Include="upload\18972\Pokana_TDog_Studentsko_kreditirane_2019.pdf_%3b filename_=UTF-8%27%27Pokana_TDog_Studentsko_kreditirane_2019.pdf%3b size=440792" />
+    <Content Include="upload\19124\9.png_%3b filename_=UTF-8%27%27973d9.png%3b size=531618" />
+    <Content Include="upload\19429\antikorupcionenPlan-2019.pdf_%3b filename_=UTF-8%27%27antikorupcionenPlan-2019.pdf%3b size=137953" />
+    <Content Include="upload\19525\IMG_20181016_170032.jpg_%3b filename_=UTF-8%27%27IMG_20181016_17003273d9.jpg%3b size=177665" />
+    <Content Include="upload\19539\avtobusi-Zaiavka-300419.doc_%3b filename_=UTF-8%27%27avtobusi-Zaiavka-300419.doc%3b size=62464" />
+    <Content Include="upload\19540\avtobusi-Spravka-sastoianie-300419.xlsx_%3b filename_=UTF-8%27%27avtobusi-Spravka-sastoianie-300419.xlsx%3b size=11666" />
+    <Content Include="upload\19669\_5.jpg_%3b filename_=UTF-8%27%27%25D0%25B4%25D1%2580%25D0%25B0%25D0%25B3%25D0%25B8%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25BE%2520573d9.jpg%3b size=80286" />
+    <Content Include="upload\19682\60777851_441708659964299_5649512887811571712_n.jpg_%3b filename_=UTF-8%27%2760777851_441708659964299_5649512887811571712_n73d9.jpg%3b size=35664" />
+    <Content Include="upload\19758\PMS105_020519.pdf_%3b filename_=UTF-8%27%27PMS105_020519.pdf%3b size=79766" />
+    <Content Include="upload\19828\dfsf.jpg_%3b filename_=UTF-8%27%27dfsf73d9.jpg%3b size=32172" />
+    <Content Include="upload\19943\Pokana-UOS_100619.pdf_%3b filename_=UTF-8%27%27Pokana-UOS_100619.pdf%3b size=781692" />
+    <Content Include="upload\19981\otchet-antikorupcia-2018.pdf_%3b filename_=UTF-8%27%27otchet-antikorupcia-2018.pdf%3b size=186402" />
+    <Content Include="upload\20043\1.JPG_%3b filename_=UTF-8%27%27173d9.JPG%3b size=219906" />
+    <Content Include="upload\20084\PovtornaPokana-UOS-1.pdf_%3b filename_=UTF-8%27%27PovtornaPokana-UOS-1.pdf%3b size=741994" />
+    <Content Include="upload\20276\Presentation-Studentsko-kreditirane-2019.pdf_%3b filename_=UTF-8%27%27Presentation-Studentsko-kreditirane-2019.pdf%3b size=164504" />
+    <Content Include="upload\20331\00_.pdf_%3b filename_=UTF-8%27%2700_%25D0%259F%25D0%25BE%25D0%25BA%25D0%25B0%25D0%25BD%25D0%25B0%2520%25D0%25BA%25D1%258A%25D0%25BC%2520%25D0%25AE%25D0%259B%25D0%259D%25D0%25A6.pdf%3b size=382280" />
+    <Content Include="upload\20332\01_Приложения+-+Документи+за+попълване.zip" />
+    <Content Include="upload\20434\Questions_and_Answers-TRG_15.08.2019.pdf_%3b filename_=UTF-8%27%27Questions_and_Answers-TRG_15.08.2019.pdf%3b size=327192" />
+    <Content Include="upload\20435\pr_zap_KE-160819.pdf_%3b filename_=UTF-8%27%27pr_zap_KE-160819.pdf%3b size=143594" />
+    <Content Include="upload\20436\pr_zap_KE-UchPrograma-1-7klas-160819.pdf_%3b filename_=UTF-8%27%27pr_zap_KE-UchPrograma-1-7klas-160819.pdf%3b size=770551" />
+    <Content Include="upload\20437\pr_zap_KE-UchPrograma-B11-160819.pdf_%3b filename_=UTF-8%27%27pr_zap_KE-UchPrograma-B11-160819.pdf%3b size=393602" />
+    <Content Include="upload\20438\pr_zap_KE-UchPrograma-B1-160819.pdf_%3b filename_=UTF-8%27%27pr_zap_KE-UchPrograma-B1-160819.pdf%3b size=364999" />
+    <Content Include="upload\20444\5210415.rar_%3b filename_=UTF-8%27%275210415.rar%3b size=161940" />
+    <Content Include="upload\20445\PRAVILNIK_za_izmenenie_i_dopylnenie_na_Pravilnika_VUIiSPI.final.docx_%3b filename_=UTF-8%27%27PRAVILNIK_za_izmenenie_i_dopylnenie_na_Pravilnika_VUIiSPI.final.docx%3b size=29344" />
+    <Content Include="upload\20447\Motivi_internati.docx_%3b filename_=UTF-8%27%27Motivi%2520internati.docx%3b size=19533" />
+    <Content Include="upload\20448\Proekti_Tipovi-Uch-Planove-525_200819.zip_%3b filename_=UTF-8%27%27Proekti_Tipovi-Uch-Planove-525_200819.zip%3b size=698977" />
+    <Content Include="upload\20451\2._motivi_kum_naredbata_za_trenirovuchnata_deinost.docx_%3b filename_=UTF-8%27%272.%2520motivi%2520kum%2520naredbata%2520za%2520trenirovuchnata%2520deinost.docx%3b size=20893" />
+    <Content Include="upload\20452\1._naredba_za_trenirovuchnata_deinost.pdf_%3b filename_=UTF-8%27%271.%2520naredba%2520za%2520trenirovuchnata%2520deinost.pdf%3b size=4794295" />
+    <Content Include="upload\20465\Questions_and_Answers-TRG_15.08.2019.pdf_%3b filename_=UTF-8%27%27Questions_and_Answers-TRG_15.08.2019.pdf%3b size=327578" />
+    <Content Include="upload\20475\Izmenitelno_PMS_-_27082019.pdf_%3b filename_=UTF-8%27%27Izmenitelno_PMS%2520-%252027082019.pdf%3b size=408243" />
+    <Content Include="upload\20476\Doklad-MS-_._-_27082019.pdf_%3b filename_=UTF-8%27%27Doklad-MS-%2520%25D0%25B8%25D0%25B7%25D0%25BC.%2520%25D0%259D%25D0%2590%2520-%252027082019.pdf%3b size=511641" />
+    <Content Include="upload\20477\2308-FINAL-OV-_-27082019.pdf_%3b filename_=UTF-8%27%272308-FINAL-OV-%2520%2520-27082019.pdf%3b size=699650" />
+    <Content Include="upload\20478\Stanovishte-dir.Moderni_-082019.pdf_%3b filename_=UTF-8%27%27Stanovishte-dir.Moderni%2520-082019.pdf%3b size=756322" />
+    <Content Include="upload\20479\HRVATSKI.rar_%3b filename_=UTF-8%27%27HRVATSKI.rar%3b size=468370" />
+    <Content Include="upload\20505\proekt_PP_ArE.pdf_%3b filename_=UTF-8%27%27proekt_PP_ArE.pdf%3b size=428275" />
+    <Content Include="upload\20506\proekt_PP_KE.pdf_%3b filename_=UTF-8%27%27proekt_PP_KE.pdf%3b size=597809" />
+    <Content Include="upload\20507\proekt_PP_JE.pdf_%3b filename_=UTF-8%27%27proekt_PP_JE.pdf%3b size=465276" />
+    <Content Include="upload\20508\proekt_PP_KrE.pdf_%3b filename_=UTF-8%27%27proekt_PP_KrE.pdf%3b size=529889" />
+    <Content Include="upload\20509\proekt_zapoved_PP_ArE-KE-KrE-JE.pdf_%3b filename_=UTF-8%27%27proekt_zapoved_PP_ArE-KE-KrE-JE.pdf%3b size=151916" />
+    <Content Include="upload\20513\zap_NVO_2019_2020.pdf_%3b filename_=UTF-8%27%27zap_NVO_2019_2020.pdf%3b size=283047" />
+    <Content Include="upload\20572\pr_UPlan_3451205_6_IKONOMIST_Gorsko_stopanstvo.pdf_%3b filename_=UTF-8%27%27pr_UPlan_3451205_%25D0%25926_IKONOMIST_Gorsko_stopanstvo.pdf%3b size=1054417" />
+    <Content Include="upload\20580\pr_Naredba_prof_izpiti_05092019.pdf_%3b filename_=UTF-8%27%27pr_Naredba_prof_izpiti_05092019.pdf%3b size=621044" />
+    <Content Include="upload\20581\pr_Naredba_prof_izpiti_motivi-05092019.pdf_%3b filename_=UTF-8%27%27pr_Naredba_prof_izpiti_motivi-05092019.pdf%3b size=383151" />
+    <Content Include="upload\20582\pr_RMS_overcontracting_motivi-05092019.pdf_%3b filename_=UTF-8%27%27pr_RMS_overcontracting_motivi-05092019.pdf%3b size=571088" />
+    <Content Include="upload\20583\pr_RMS_overcontracting_05092019.pdf_%3b filename_=UTF-8%27%27pr_RMS_overcontracting_05092019.pdf%3b size=212735" />
+    <Content Include="upload\20596\pr_UchPlan_3451203_B19_Ikonomist_ZS_ZFO_100919.pdf_%3b filename_=UTF-8%27%27pr_UchPlan_3451203_B19_Ikonomist_ZS_ZFO_100919.pdf%3b size=260496" />
+    <Content Include="upload\20601\pr_zap_pomagala_history-geo_100919.pdf_%3b filename_=UTF-8%27%27pr_zap_pomagala_history-geo_100919.pdf%3b size=152826" />
+    <Content Include="upload\20604\pr_ketaring_110919.rar_%3b filename_=UTF-8%27%27pr_ketaring_110919.rar%3b size=62669" />
+    <Content Include="upload\20607\PR_NIP_I-SPK_HVP.rar_%3b filename_=UTF-8%27%27PR_NIP_I-SPK_HVP.rar%3b size=70207" />
+    <Content Include="upload\20608\Pokana_OPD_120919.pdf_%3b filename_=UTF-8%27%27Pokana_OPD_120919.pdf%3b size=156124" />
+    <Content Include="upload\20609\pokana_OPD_docs-app_120919.rar_%3b filename_=UTF-8%27%27pokana_OPD_docs-app_120919.rar%3b size=34622" />
+    <Content Include="upload\20620\pr_5220210-_18.pdf_%3b filename_=UTF-8%27%27pr_5220210-%25D0%259218.pdf%3b size=302211" />
+    <Content Include="upload\20631\nrdb10-2016_organizatsia-dejnosti_izm130919.pdf_%3b filename_=UTF-8%27%27nrdb10-2016_organizatsia-dejnosti_izm130919.pdf%3b size=366850" />
+    <Content Include="upload\20644\pr_Ketaring_160919.pdf_%3b filename_=UTF-8%27%27pr_Ketaring_160919.pdf%3b size=328990" />
+    <Content Include="upload\20656\pr-542-tehnilogia.rar_%3b filename_=UTF-8%27%27pr-542-tehnilogia.rar%3b size=102110" />
+    <Content Include="upload\20712\pr_Strategia_POO.pdf_%3b filename_=UTF-8%27%27pr_Strategia_POO.pdf%3b size=1221811" />
+    <Content Include="upload\20713\pr_Strategia_POO_actionPlan.pdf_%3b filename_=UTF-8%27%27pr_Strategia_POO_actionPlan.pdf%3b size=631700" />
+    <Content Include="upload\20714\pr_Strategia_POO_doklad.pdf_%3b filename_=UTF-8%27%27pr_Strategia_POO_doklad.pdf%3b size=502750" />
+    <Content Include="upload\20715\pr_Strategia_POO_monitoring-doklad.pdf_%3b filename_=UTF-8%27%27pr_Strategia_POO_monitoring-doklad.pdf%3b size=2211619" />
+    <Content Include="upload\20716\pr_Strategia_POO-RMS.pdf_%3b filename_=UTF-8%27%27pr_Strategia_POO-RMS.pdf%3b size=191865" />
+    <Content Include="upload\20727\pr_5220102i22212_2009219.rar_%3b filename_=UTF-8%27%27pr_5220102i22212_2009219.rar%3b size=254701" />
+    <Content Include="upload\20730\pr_agreement-BG-Vietnam-RMS_240919.pdf_%3b filename_=UTF-8%27%27pr_agreement-BG-Vietnam-RMS_240919.pdf%3b size=710844" />
+    <Content Include="upload\20731\pr_agreement-BG-Vietnam-BG_240919.pdf_%3b filename_=UTF-8%27%27pr_agreement-BG-Vietnam-BG_240919.pdf%3b size=846055" />
+    <Content Include="upload\20732\pr_agreement-BG-Vietnam-ENG_240919.pdf_%3b filename_=UTF-8%27%27pr_agreement-BG-Vietnam-ENG_240919.pdf%3b size=714980" />
+    <Content Include="upload\20733\pr_agreement-BG-Vietnam-doklad_240919.pdf_%3b filename_=UTF-8%27%27pr_agreement-BG-Vietnam-doklad_240919.pdf%3b size=147886" />
+    <Content Include="upload\20754\pr_5220212_TUchPl.rar_%3b filename_=UTF-8%27%27pr_5220212_TUchPl.rar%3b size=612345" />
+    <Content Include="upload\20755\pr_5220204_TUchPl.rar_%3b filename_=UTF-8%27%27pr_5220204_TUchPl.rar%3b size=639579" />
+    <Content Include="upload\20756\pr_5220103-UcheProgrami-dualna.rar_%3b filename_=UTF-8%27%27pr_5220103-UcheProgrami-dualna.rar%3b size=191791" />
+    <Content Include="upload\20757\pr_5220103-UcheProgrami-dnevna.rar_%3b filename_=UTF-8%27%27pr_5220103-UcheProgrami-dnevna.rar%3b size=258603" />
+    <Content Include="upload\20759\pr_521050-260919-1.rar_%3b filename_=UTF-8%27%27pr_521050-260919-1.rar%3b size=1548124" />
+    <Content Include="upload\20760\pr_5210702-2609-2.rar_%3b filename_=UTF-8%27%27pr_5210702-2609-2.rar%3b size=284931" />
+    <Content Include="upload\20888\Info_TU-Gabrovo_081019.pdf_%3b filename_=UTF-8%27%27Info_TU-Gabrovo_081019.pdf%3b size=65346" />
+    <Content Include="upload\20889\ID_Pravilnik-NIO_PMS-08102019.pdf_%3b filename_=UTF-8%27%27ID_Pravilnik-NIO_PMS-08102019.pdf%3b size=498450" />
+    <Content Include="upload\20890\ID_Pravilnik-NIO_Doklad-08102019.pdf_%3b filename_=UTF-8%27%27ID_Pravilnik-NIO_Doklad-08102019.pdf%3b size=521152" />
+    <Content Include="upload\20891\ID_Pravilnik-NIO-form_08102019.pdf_%3b filename_=UTF-8%27%27ID_Pravilnik-NIO-form_08102019.pdf%3b size=581384" />
+    <Content Include="upload\20892\ID_Pravilnik-NIO_stanovishte_-08102019.pdf_%3b filename_=UTF-8%27%27ID_Pravilnik-NIO_stanovishte%2520-08102019.pdf%3b size=617202" />
+    <Content Include="upload\20912\Agreement_BG_Qatar_RMS_110119.pdf_%3b filename_=UTF-8%27%27Agreement_BG_Qatar_RMS_110119.pdf%3b size=710710" />
+    <Content Include="upload\20913\Agreement_BG_Qatar_doklad_110119.pdf_%3b filename_=UTF-8%27%27Agreement_BG_Qatar_doklad_110119.pdf%3b size=799712" />
+    <Content Include="upload\20914\Agreement_BG_Qatar_110119.pdf_%3b filename_=UTF-8%27%27Agreement_BG_Qatar_110119.pdf%3b size=791576" />
+    <Content Include="upload\20915\Agreement_ENG_Qatar_110119.pdf_%3b filename_=UTF-8%27%27Agreement_ENG_Qatar_110119.pdf%3b size=118207" />
+    <Content Include="upload\20984\pr_5220101-5220201_151019.rar_%3b filename_=UTF-8%27%27pr_5220101-5220201_151019.rar%3b size=511763" />
+    <Content Include="upload\20988\Pr_sredishtni_rms987-161019.pdf_%3b filename_=UTF-8%27%27Pr_sredishtni_rms987-161019.pdf%3b size=1207763" />
+    <Content Include="upload\20989\Pr_sredishtni_doklad-161019.pdf_%3b filename_=UTF-8%27%27Pr_sredishtni_doklad-161019.pdf%3b size=285327" />
+    <Content Include="upload\20990\pr_zashtiteni_doklad-161019.pdf_%3b filename_=UTF-8%27%27pr_zashtiteni_doklad-161019.pdf%3b size=870931" />
+    <Content Include="upload\20991\pr_zashtiteni_rsm257-161019.pdf_%3b filename_=UTF-8%27%27pr_zashtiteni_rsm257-161019.pdf%3b size=380858" />
+    <Content Include="upload\20997\pr_KABC_2019.rar_%3b filename_=UTF-8%27%27pr_KABC_2019.rar%3b size=162989" />
+    <Content Include="upload\21003\motivi_kum_Aktior.pdf_%3b filename_=UTF-8%27%27motivi_kum_Aktior.pdf%3b size=303395" />
+    <Content Include="upload\21004\Project_Naredba_Aktior_1.pdf_%3b filename_=UTF-8%27%27Project_Naredba_Aktior_1.pdf%3b size=894044" />
+    <Content Include="upload\21005\motivi_kum_Ohranitel.pdf_%3b filename_=UTF-8%27%27motivi_kum_Ohranitel.pdf%3b size=303440" />
+    <Content Include="upload\21006\Project_Naredba_Ohranitel.pdf_%3b filename_=UTF-8%27%27Project_Naredba_Ohranitel.pdf%3b size=837013" />
+    <Content Include="upload\21007\motivi_kum_Operator_v_darvoobrabotvaneto.pdf_%3b filename_=UTF-8%27%27motivi_kum_Operator_v_darvoobrabotvaneto.pdf%3b size=303259" />
+    <Content Include="upload\21008\Project_Naredba_Operator_v_darvoobrabotvaneto.pdf_%3b filename_=UTF-8%27%27Project_Naredba_Operator_v_darvoobrabotvaneto.pdf%3b size=918047" />
+    <Content Include="upload\21009\motivi_kum_Pomoshtnik_v_stroitelstvoto.pdf_%3b filename_=UTF-8%27%27motivi_kum_Pomoshtnik_v_stroitelstvoto.pdf%3b size=303551" />
+    <Content Include="upload\21010\Project_Naredba_Pomoshtnik_v_stroitelstvoto.pdf_%3b filename_=UTF-8%27%27Project_Naredba_Pomoshtnik_v_stroitelstvoto.pdf%3b size=511625" />
+    <Content Include="upload\21011\Project_Naredba_Pomoshtnik_vazpitatel.pdf_%3b filename_=UTF-8%27%27Project_Naredba_Pomoshtnik_vazpitatel.pdf%3b size=765082" />
+    <Content Include="upload\21012\motivi_kum_Pomoshtnik_vazpitatel.pdf_%3b filename_=UTF-8%27%27motivi_kum_Pomoshtnik_vazpitatel.pdf%3b size=304405" />
+    <Content Include="upload\21013\Motivi_Grafichen_dizainer.pdf_%3b filename_=UTF-8%27%27Motivi_Grafichen_dizainer.pdf%3b size=305329" />
+    <Content Include="upload\21014\Naredba_Grafichen_dizainer.pdf_%3b filename_=UTF-8%27%27Naredba_Grafichen_dizainer.pdf%3b size=756917" />
+    <Content Include="upload\21015\Motivi_Komputaren_grafik.pdf_%3b filename_=UTF-8%27%27Motivi_Komputaren_grafik.pdf%3b size=305729" />
+    <Content Include="upload\21016\Naredba_Komputaren_grafik.pdf_%3b filename_=UTF-8%27%27Naredba_Komputaren_grafik.pdf%3b size=628919" />
+    <Content Include="upload\21017\Motivi_office_manager.pdf_%3b filename_=UTF-8%27%27Motivi_office_manager.pdf%3b size=305239" />
+    <Content Include="upload\21018\Naredba_office_manager.pdf_%3b filename_=UTF-8%27%27Naredba_office_manager.pdf%3b size=535824" />
+    <Content Include="upload\21019\Motivi_Organizator_internet_prilogeniq.pdf_%3b filename_=UTF-8%27%27Motivi_Organizator_internet_prilogeniq.pdf%3b size=304070" />
+    <Content Include="upload\21020\Motivi_kum_Montior_na_elektronna_tehnika.pdf_%3b filename_=UTF-8%27%27Motivi_kum_Montior_na_elektronna_tehnika.pdf%3b size=304054" />
+    <Content Include="upload\21021\Naredba_Montior_na_elektronna_tehnika.pdf_%3b filename_=UTF-8%27%27Naredba_Montior_na_elektronna_tehnika.pdf%3b size=680212" />
+    <Content Include="upload\21022\Naredba_Organizator_internet_prilogeniq.pdf_%3b filename_=UTF-8%27%27Naredba_Organizator_internet_prilogeniq.pdf%3b size=567618" />
+    <Content Include="upload\21023\Naredba_Montior_na_ESI.pdf_%3b filename_=UTF-8%27%27Naredba_Montior_na_ESI.pdf%3b size=1137065" />
+    <Content Include="upload\21024\Motivi_kum_Montior_na_ESI.pdf_%3b filename_=UTF-8%27%27Motivi_kum_Montior_na_ESI.pdf%3b size=307584" />
+    <Content Include="upload\21026\babi.png_%3b filename_=UTF-8%27%27babi73d9.png%3b size=486246" />
+    <Content Include="upload\21029\72317173_2768573033155507_4499592491602804736_o.jpg_%3b filename_=UTF-8%27%2772317173_2768573033155507_4499592491602804736_o73d9.jpg%3b size=39886" />
+    <Content Include="upload\21075\Spravka_OshtK_Pravilnik-internati_251019.pdf_%3b filename_=UTF-8%27%27Spravka_OshtK_Pravilnik-internati_251019.pdf%3b size=282870" />
+    <Content Include="upload\21080\zakonNIMH_rms_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_rms_281019.pdf%3b size=242062" />
+    <Content Include="upload\21081\zakonNIMH_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_281019.pdf%3b size=534062" />
+    <Content Include="upload\21082\zakonNIMH_Doklad_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_Doklad_281019.pdf%3b size=507539" />
+    <Content Include="upload\21083\zakonNIMH_motivi_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_motivi_281019.pdf%3b size=409201" />
+    <Content Include="upload\21084\zakonNIMH_Doklad-OB_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_Doklad-OB_281019.pdf%3b size=858005" />
+    <Content Include="upload\21085\zakonNIMH_Doklad-OB-rez_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_Doklad-OB-rez_281019.pdf%3b size=663079" />
+    <Content Include="upload\21086\zakonNIMH_Stan_281019.pdf_%3b filename_=UTF-8%27%27zakonNIMH_Stan_281019.pdf%3b size=674510" />
+    <Content Include="upload\21087\PMS_zashtiteni_spec_28102019.pdf_%3b filename_=UTF-8%27%27PMS_zashtiteni_spec_28102019.pdf%3b size=460165" />
+    <Content Include="upload\21088\PMS_zashtiteni_spec_doklad_28102019.pdf_%3b filename_=UTF-8%27%27PMS_zashtiteni_spec_doklad_28102019.pdf%3b size=496107" />
+    <Content Include="upload\21089\PMS_zashtiteni_spec_OB_28102019.pdf_%3b filename_=UTF-8%27%27PMS_zashtiteni_spec_OB_28102019.pdf%3b size=579218" />
+    <Content Include="upload\21090\PMS_zashtiteni_spec_Stan_28102019.pdf_%3b filename_=UTF-8%27%27PMS_zashtiteni_spec_Stan_28102019.pdf%3b size=679886" />
+    <Content Include="upload\21091\2019-komp-mrezhi.rar_%3b filename_=UTF-8%27%272019-komp-mrezhi.rar%3b size=171386" />
+    <Content Include="upload\21092\2019-KTT.rar_%3b filename_=UTF-8%27%272019-KTT.rar%3b size=151350" />
+    <Content Include="upload\21093\2019-Mikroproc-tehnika.rar_%3b filename_=UTF-8%27%272019-Mikroproc-tehnika.rar%3b size=60746" />
+    <Content Include="upload\21094\5230302_MPTdualno3-B11_B13_B15.rar_%3b filename_=UTF-8%27%275230302_MPTdualno3-B11%252CB13%252CB15.rar%3b size=116258" />
+    <Content Include="upload\21095\5230401_PEdnevno-_1.rar_%3b filename_=UTF-8%27%275230401_PEdnevno-%25D0%25921.rar%3b size=66179" />
+    <Content Include="upload\21096\5230401_PEdualno2-B10_B12_B14.rar_%3b filename_=UTF-8%27%275230401_PEdualno2-B10%252CB12%252CB14.rar%3b size=120405" />
+    <Content Include="upload\21097\5230402_MPTdnevno2-B1_B3_B5.rar_%3b filename_=UTF-8%27%275230402_MPTdnevno2-B1%252CB3%252CB5.rar%3b size=99083" />
+    <Content Include="upload\21098\5230402_MPTdualno2-B10_B12_B14.rar_%3b filename_=UTF-8%27%275230402_MPTdualno2-B10%252CB12%252CB14.rar%3b size=100942" />
+    <Content Include="upload\21100\Projekt_Naredba_Modist.pdf_%3b filename_=UTF-8%27%27Projekt_Naredba_Modist.pdf%3b size=903060" />
+    <Content Include="upload\21101\motivi_kum_Modist.pdf_%3b filename_=UTF-8%27%27motivi_kum_Modist.pdf%3b size=302086" />
+    <Content Include="upload\21102\motivi_kum_Stroitelen_tehnik.pdf_%3b filename_=UTF-8%27%27motivi_kum_Stroitelen_tehnik.pdf%3b size=303394" />
+    <Content Include="upload\21103\Projekt_Naredba_Stroitelen_tehnik.pdf_%3b filename_=UTF-8%27%27Projekt_Naredba_Stroitelen_tehnik.pdf%3b size=962772" />
+    <Content Include="upload\21107\pr_mehBAN_PMS_291019.pdf_%3b filename_=UTF-8%27%27pr_mehBAN_PMS_291019.pdf%3b size=795602" />
+    <Content Include="upload\21108\pr_mehBAN_doklad_291019.pdf_%3b filename_=UTF-8%27%27pr_mehBAN_doklad_291019.pdf%3b size=827715" />
+    <Content Include="upload\21109\pr_mehBAN_OB_291019.pdf_%3b filename_=UTF-8%27%27pr_mehBAN_OB_291019.pdf%3b size=250573" />
+    <Content Include="upload\21110\pr_mehBAN_Stan_291019.pdf_%3b filename_=UTF-8%27%27pr_mehBAN_Stan_291019.pdf%3b size=627545" />
+    <Content Include="upload\21111\5220101_-_11_13.rar_%3b filename_=UTF-8%27%275220101%2520%25D0%2595%25D0%25BB%25D0%25B5%25D0%25BA%25D1%2582%25D1%2580%25D0%25BE%25D1%2582%25D0%25B5%25D1%2585%25D0%25BD%25D0%25B8%25D0%25BA-%25D0%259211%252C%25D0%259213.rar%3b size=57521" />
+    <Content Include="upload\21112\5220201_-_1_3_10_12.rar_%3b filename_=UTF-8%27%275220201%2520%25D0%2595%25D0%25BB%25D0%25B5%25D0%25BA%25D1%2582%25D1%2580%25D0%25BE%25D0%25BC%25D0%25BE%25D0%25BD%25D1%2582%25D1%258C%25D0%25BE%25D1%2580-%25D0%25921%252C%25D0%25923%252C%25D0%259210%252C%25D0%259212.rar%3b size=10" />
+    <Content Include="upload\21113\Уч.програми-ЕМА+за+Ел.инсталации.rar" />
+    <Content Include="upload\21114\Pr-341-25_291019.rar_%3b filename_=UTF-8%27%27Pr-341-25_291019.rar%3b size=1389170" />
+    <Content Include="upload\21119\izmPMS103_301019.pdf_%3b filename_=UTF-8%27%27izmPMS103_301019.pdf%3b size=446209" />
+    <Content Include="upload\21120\izmPMS103_Doklad-MS_301019.pdf_%3b filename_=UTF-8%27%27izmPMS103_Doklad-MS_301019.pdf%3b size=510882" />
+    <Content Include="upload\21121\izmPMS103_OB_301019.pdf_%3b filename_=UTF-8%27%27izmPMS103_OB_301019.pdf%3b size=612303" />
+    <Content Include="upload\21122\izmPMS103_Stan_301019.pdf_%3b filename_=UTF-8%27%27izmPMS103_Stan_301019.pdf%3b size=614951" />
+    <Content Include="upload\21123\pr_uchebniPlanove_5220310.rar_%3b filename_=UTF-8%27%27pr_uchebniPlanove_5220310.rar%3b size=1296102" />
+    <Content Include="upload\21124\pr_uchebniProg_TESI_MESl.rar_%3b filename_=UTF-8%27%27pr_uchebniProg_TESI_MESl.rar%3b size=2778474" />
+    <Content Include="upload\21125\pr_uchebniProg_ElObzavezhdane-asansjor.rar_%3b filename_=UTF-8%27%27pr_uchebniProg_ElObzavezhdane-asansjor.rar%3b size=750387" />
+    <Content Include="upload\21126\pr_uchebniProg_Elektrodom-tehnika.rar_%3b filename_=UTF-8%27%27pr_uchebniProg_Elektrodom-tehnika.rar%3b size=844584" />
+    <Content Include="upload\21136\dldaksfjak.jpg_%3b filename_=UTF-8%27%27dldaksfjak.jpg%3b size=238020" />
+    <Content Include="upload\21142\240519.JPG_%3b filename_=UTF-8%27%27240519.JPG%3b size=3924384" />
+    <Content Include="upload\21144\pr_izmNar_dba-finansirane-form_011119.pdf_%3b filename_=UTF-8%27%27pr_izmNar%25D0%25B5dba-finansirane-form_011119.pdf%3b size=259460" />
+    <Content Include="upload\21145\pr_izmNaredba-finansirane-doklad.pdf_%3b filename_=UTF-8%27%27pr_izmNaredba-finansirane-doklad.pdf%3b size=793079" />
+    <Content Include="upload\21146\pr_izmNar_dba-finansirane-PMS_011119.pdf_%3b filename_=UTF-8%27%27pr_izmNar%25D0%25B5dba-finansirane-PMS_011119.pdf%3b size=770892" />
+    <Content Include="upload\21147\pr_izmNar_dba-finansirane-Stan_011119.pdf_%3b filename_=UTF-8%27%27pr_izmNar%25D0%25B5dba-finansirane-Stan_011119.pdf%3b size=681034" />
+    <Content Include="upload\21163\doklad_KAE_051119.pdf_%3b filename_=UTF-8%27%27doklad_KAE_051119.pdf%3b size=125678" />
+    <Content Include="upload\21164\spravka-ObshtK_nardba_deynost_izv_uch_051119.pdf_%3b filename_=UTF-8%27%27spravka-ObshtK_nardba_deynost_izv_uch_051119.pdf%3b size=78095" />
+    <Content Include="upload\21198\doklad_KAE_071119-2.pdf_%3b filename_=UTF-8%27%27doklad_KAE_071119-2.pdf%3b size=123139" />
+    <Content Include="upload\21199\doklad_KAE_071119-1.pdf_%3b filename_=UTF-8%27%27doklad_KAE_071119-1.pdf%3b size=127644" />
+    <Content Include="upload\21231\TKS_OKS.rar_%3b filename_=UTF-8%27%27TKS_OKS.rar%3b size=283888" />
+    <Content Include="upload\21245\_.png_%3b filename_=UTF-8%27%27%25D0%259A%25D0%25A2%25D0%2594_%25D0%259F%25D0%25BE%25D0%25B4%25D0%25BF%25D0%25B8%25D1%2581%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25B5.png%3b size=1265288" />
+    <Content Include="upload\21270\_.png_%3b filename_=UTF-8%27%27%25D0%259F%25D1%2580%25D0%25B5%25D0%25B4%25D1%2581%25D1%2582%25D0%25B0%25D0%25B2%25D1%258F%25D0%25BD%25D0%25B5%2520%25D0%25BD%25D0%25B0%2520%25D0%25BF%25D1%2580%25D0%25BE%25D0%25B5%25D0%25BA%25D1%2582%25D0%25B8_%25D0%259C%25D0%259E%25D0%259D.png%3b size=1297073" />
+    <Content Include="upload\21276\pr_5230102_5230105-praktika.rar_%3b filename_=UTF-8%27%27pr_5230102_5230105-praktika.rar%3b size=2827660" />
+    <Content Include="upload\21277\pr_Planove-5230-102.105.202.205.rar_%3b filename_=UTF-8%27%27pr_Planove-5230-102.105.202.205.rar%3b size=106542" />
+    <Content Include="upload\21308\21119.jpg_%3b filename_=UTF-8%27%2721119.jpg%3b size=2819112" />
+    <Content Include="upload\21308\21119.jpg_%3b filename_=UTF-8%27%27211194bef.jpg%3b size=8446" />
+    <Content Include="upload\21310\21119-1.jpg_%3b filename_=UTF-8%27%2721119-1.jpg%3b size=4197083" />
+    <Content Include="upload\21334\Resorantior_motivi_261119.pdf_%3b filename_=UTF-8%27%27Resorantior_motivi_261119.pdf%3b size=305362" />
+    <Content Include="upload\21335\Resorantior_Projekt_Naredba_261119.pdf_%3b filename_=UTF-8%27%27Resorantior_Projekt_Naredba_261119.pdf%3b size=883237" />
+    <Content Include="upload\21337\doklad_KAE_190319-2.pdf_%3b filename_=UTF-8%27%27doklad_KAE_190319-2.pdf%3b size=128537" />
+    <Content Include="upload\21345\_-_.jpg_%3b filename_=UTF-8%27%27%25D0%25A1%25D0%25BA%25D0%25B0%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520-%2520%25D1%2583%25D1%2587%25D0%25B8%25D0%25BB%25D0%25B8%25D1%2589%25D0%25B573d9.jpg%3b size=24709" />
+    <Content Include="upload\21348\_-_.jpeg_%3b filename_=UTF-8%27%27%25D0%259C%25D0%259E%25D0%259D%2520-%2520%25D0%25BC%25D0%25B5%25D0%25B4%25D0%25B0%25D0%25BB%25D0%25B873d9.jpeg%3b size=24275" />
+    <Content Include="upload\21349\Spravka_ObshtKon_ofis-manadzher_112019.pdf_%3b filename_=UTF-8%27%27Spravka_ObshtKon_ofis-manadzher_112019.pdf%3b size=197651" />
+    <Content Include="upload\21351\parnik.png_%3b filename_=UTF-8%27%27parnik73d9.png%3b size=333924" />
+    <Content Include="upload\21359\aneks_d01-236_kamKTD_121119.pdf_%3b filename_=UTF-8%27%27aneks_d01-236_kamKTD_121119.pdf%3b size=130610" />
+    <Content Include="upload\21360\Kostenec_1.jpeg_%3b filename_=UTF-8%27%27Kostenec%2520173d9.jpeg%3b size=56337" />
+    <Content Include="upload\21362\pr_zap_rech-predmetna-dejnost_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_rech-predmetna-dejnost_281119.pdf%3b size=795349" />
+    <Content Include="upload\21363\pr_zap_razvitie-na-rechta_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_razvitie-na-rechta_281119.pdf%3b size=818877" />
+    <Content Include="upload\21364\pr_zap_razvitie_na_rechta_proiznoshenie_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_razvitie_na_rechta_proiznoshenie_281119.pdf%3b size=820250" />
+    <Content Include="upload\21365\pr_zap_muzikalni_stimulacii_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_muzikalni_stimulacii_281119.pdf%3b size=795771" />
+    <Content Include="upload\21366\pr_zap_motorika_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_motorika_281119.pdf%3b size=795548" />
+    <Content Include="upload\21367\pr_zap_fonetichna-ritmika_281119.pdf_%3b filename_=UTF-8%27%27pr_zap_fonetichna-ritmika_281119.pdf%3b size=796638" />
+    <Content Include="upload\21373\301119.png_%3b filename_=UTF-8%27%2730111973d9.png%3b size=503820" />
+    <Content Include="upload\21375\_1_.png_%3b filename_=UTF-8%27%27%25D0%25A1%25D0%25B0%25D1%2587%25D0%25B5%25D0%25B2%25D0%25B0_1_%25D0%2598%25D1%2581%25D1%2582%25D0%25B0%25D0%25BD%25D0%25B1%25D1%2583%25D0%25BB456d.png%3b size=147823" />
+    <Content Include="upload\21375\_1_.png_%3b filename_=UTF-8%27%27%25D0%25A1%25D0%25B0%25D1%2587%25D0%25B5%25D0%25B2%25D0%25B0_1_%25D0%2598%25D1%2581%25D1%2582%25D0%25B0%25D0%25BD%25D0%25B1%25D1%2583%25D0%25BB73d9.png%3b size=467607" />
+    <Content Include="upload\21379\WhatsApp_Image_2019-11-30_at_14.42.15.jpeg_%3b filename_=UTF-8%27%27WhatsApp%2520Image%25202019-11-30%2520at%252014.42.15456d.jpeg%3b size=9193" />
+    <Content Include="upload\21379\WhatsApp_Image_2019-11-30_at_14.42.15.jpeg_%3b filename_=UTF-8%27%27WhatsApp%2520Image%25202019-11-30%2520at%252014.42.1573d9.jpeg%3b size=25392" />
+    <Content Include="upload\21381\Denitsa_Sacheva_Istanbul.jpg_%3b filename_=UTF-8%27%27Denitsa%2520Sacheva_Istanbul456d.jpg%3b size=26450" />
+    <Content Include="upload\21381\Denitsa_Sacheva_Istanbul.jpg_%3b filename_=UTF-8%27%27Denitsa%2520Sacheva_Istanbul73d9.jpg%3b size=72895" />
+    <Content Include="upload\21397\_DSC1804.JPG_%3b filename_=UTF-8%27%27_DSC1804456d.JPG%3b size=29911" />
+    <Content Include="upload\21397\_DSC1804.JPG_%3b filename_=UTF-8%27%27_DSC180473d9.JPG%3b size=62466" />
+    <Content Include="upload\21399\pr_IzmUP-MON-PMS-031219.pdf_%3b filename_=UTF-8%27%27pr_IzmUP-MON-PMS-031219.pdf%3b size=837754" />
+    <Content Include="upload\21400\pr_IzmUP-MON-doklad-031219.pdf_%3b filename_=UTF-8%27%27pr_IzmUP-MON-doklad-031219.pdf%3b size=938296" />
+    <Content Include="upload\21401\pr_IzmUP-MON-OB-031219.pdf_%3b filename_=UTF-8%27%27pr_IzmUP-MON-OB-031219.pdf%3b size=293482" />
+    <Content Include="upload\21402\pr_IzmUP-MON-StanMS-031219.pdf_%3b filename_=UTF-8%27%27pr_IzmUP-MON-StanMS-031219.pdf%3b size=648832" />
+    <Content Include="upload\21409\nauka.jpg_%3b filename_=UTF-8%27%27nauka456d.jpg%3b size=23392" />
+    <Content Include="upload\21409\nauka.jpg_%3b filename_=UTF-8%27%27nauka73d9.jpg%3b size=61559" />
+    <Content Include="upload\3012\nrdb_1_03_izp_prog_dzi.pdf_%3b filename_=UTF-8%27%27nrdb_1_03_izp_prog_dzi.pdf%3b size=168346" />
+    <Content Include="upload\3958\zakon_kreditirane_studenti_2015.pdf_%3b filename_=UTF-8%27%27zakon_kreditirane_studenti_2015.pdf%3b size=141055" />
+    <Content Include="upload\3961\uverenie_krediti_studenti1.doc_%3b filename_=UTF-8%27%27uverenie_krediti_studenti1.doc%3b size=31232" />
+    <Content Include="upload\4007\Diagnostic_BG.pdf_%3b filename_=UTF-8%27%27Diagnostic_BG.pdf%3b size=261606" />
+    <Content Include="upload\4010\ScienceInfrastructure_presentation.pdf_%3b filename_=UTF-8%27%27ScienceInfrastructure_presentation.pdf%3b size=1753205" />
+    <Content Include="upload\4011\INFRASTRUKTURA_kartografirane_11.04.2017.pdf_%3b filename_=UTF-8%27%27INFRASTRUKTURA_kartografirane_11.04.2017.pdf%3b size=1707644" />
+    <Content Include="upload\4012\Roadmap_2017_BG.pdf_%3b filename_=UTF-8%27%27Roadmap_2017_BG.pdf%3b size=1327919" />
+    <Content Include="upload\4951\regsistar_chastni_kolezhi_1.02.2016.pdf_%3b filename_=UTF-8%27%27regsistar_chastni_kolezhi_1.02.2016.pdf%3b size=151075" />
+    <Content Include="upload\4952\rms766_12122017_SredishtniUch.pdf_%3b filename_=UTF-8%27%27rms766_12122017_SredishtniUch.pdf%3b size=273840" />
+    <Content Include="upload\4953\rms775_14122017_zashtiteni_uch.pdf_%3b filename_=UTF-8%27%27rms775_14122017_zashtiteni_uch.pdf%3b size=180060" />
+    <Content Include="upload\4955\instruktsia_registar_nd.pdf_%3b filename_=UTF-8%27%27instruktsia_registar_nd.pdf%3b size=126693" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60177</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44374/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
